@@ -2,8 +2,10 @@
 library(tidyverse)
 
 # read in entity registration data for those registered in SAM to do business with the federal govt
-  # https://sam.gov/data-services/Entity%20Registration/Public%20V2?privacy=Public
-  # NOTE I had to manually download data
+  # you will need to go to the url below, download the zip file, and then within the zip file there's
+  # a dat file that you can add into this repo to run the script
+    # https://sam.gov/data-services/Entity%20Registration/Public%20V2?privacy=Public
+    # NOTE I had to manually download data, you can't import from the url link
 dat <- read.table("~/contractors-list/SAM_PUBLIC_MONTHLY_V2_20250302.dat", header = F, sep = "|",
                   fill = T, quote = "", stringsAsFactors = F, skip = 1)
 
